@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle using WebGL</title>
+    <meta charset="utf-8" />
+    <style>
+        .row {
+            display: flex;
+        }
+        .column{
+            flex: 25%;
+        }
+    </style>
+</head>
+<body onload="initGL()">
+<center>
+    <h1>
+        Robot Using Hierarchical Translations
+    </h1>
+    <h2> Qiang Xiao </h2>
+</center>
+<canvas id="drawSurface" width="800" height="600" style="border:1px solid black">
+    If you see this, browser does not support WebGL
+</canvas>
+<br/>
+<div class="row">
+    <div class="column">
+        <fieldset>
+            <legend>Robot Translation</legend>
+            <label for="xTranslate">X:</label>
+            <input type="range" id="xTranslate" value="0.0" min="-20.0" max="10.0" step="0.5" />
+            <br/>
+            <label for="yTranslate">Y:</label>
+            <input type="range" id="yTranslate" value="0.0" min="-20.0" max="10.0" step="0.5" />
+            <br/>
+            <label for="zTranslate">Z:</label>
+            <input type="range" id="zTranslate" value="-5" min="-20.0" max="10.0" step="0.5" />
+            <fieldset>
+                <legend>
+                    Rotation
+                </legend>
+                <label for="yBodyRotate">Y:</label>
+                <input type="range" id="yBodyRotate" value="0.0" min="-180.0" max="180.0" step="10" />
+            </fieldset>
+        </fieldset>
+    </div>
+
+    <div class="column">
+        <fieldset>
+            <legend>Upper Arm Rotation</legend>
+            <label for="yUpperArmRotate">Y:</label>
+            <input type="range" id="yUpperArmRotate" value="0.0" min="-180.0" max="180.0" step="10" />
+        </fieldset>
+    </div>
+
+    <div class="column">
+        <fieldset>
+            <legend>Lower Arm Rotation</legend>
+            <label for="yLowerArmRotate">Y:</label>
+            <input type="range" id="yLowerArmRotate" value="0.0" min="-180.0" max="180.0" step="10" />
+        </fieldset>
+    </div>
+    <div class="column">
+        <fieldset>
+            <legend>Head Rotation</legend>
+            <label for="HeadRotate">Y:</label>
+            <input type="range" id="HeadRotate" value="0.0" min="-180.0" max="180.0" step="10" />
+        </fieldset>
+    </div>
+</div>
+<script src="robot.js"></script>
+<script src="gl-matrix.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 1</title>
+
+    <body onload="initGL()">
+        <center>
+            <h1>
+                Use Sliders to Change Graphic Context Area Color
+            </h1>
+            <h2> Qiang Xiao </h2>
+        </center>
+
+        <canvas id="canvas" width="800" height="600" style="border:1px dashed"></canvas>
+        <div>
+            <label for="Red">Red: <input type="range" id="RedSlider" name="Red" min="0.0" max="1.0" step="0.1"></label>
+            <input type="text" size="3" id="RedText"><br>
+            <label for="Green">Green: <input type="range" id="GreenSlider" name="Green" min="0.0" max="1.0" step="0.1"></label>
+            <input type="text" size="3" id="GreenText"><br>
+            <label for="Blue">Blue: <input type="range" id="BlueSlider" name="Blue" min="0.0" max="1.0" step="0.1"></label>
+            <input type="text" size="3" id="BlueText">
+        </div>
+        <script src="HW1.js"></script>
+    </body>
+</head>
+</html>

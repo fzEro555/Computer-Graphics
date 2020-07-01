@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Triangle using WebGL</title>
+    <meta charset="utf-8" />
+</head>
+<body onload="initWebGL()">
+<center>
+    <h1>
+        Triangle Position Modified Via Sliders
+    </h1>
+    <h2> Qiang Xiao </h2>
+</center>
+    <canvas id="draw_surface" width="500" height="500" style="border:1px dashed">
+        Browser does not support WebGL
+    </canvas>
+        <div>
+            <label for="X">X_delta: <input type="range" id="XSlider" name="X" min="-1.0" max="1.0" step="0.1"></label>
+            <input type="text" size="3" id="XText"><br>
+            <label for="Angle">Angle_rotation: <input type="range" id="AngleSlider" name="Angle" value = "0" min="0" max="180" step="30"></label>
+            <input type="text" size="3" id="AngleText"><br>
+        </div>
+    <script src="drawTriangle.js"></script>
+</body>
+</html>
